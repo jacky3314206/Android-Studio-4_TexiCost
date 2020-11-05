@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
             EditText findcount1 = (EditText)findViewById(R.id.edit2);
             EditText findcount2 = (EditText)findViewById(R.id.edit3);
 
-            int basic = 75;
+            int basic = 80;
             //距離
             double distance = Double.parseDouble(findcount.getText().toString());
             double basicCount = Double.parseDouble(findcount1.getText().toString());
@@ -40,8 +40,8 @@ public class MainActivity extends AppCompatActivity {
             //里程低於250公尺時
             if (distance < 250){
                 cost.setText("1000 元");
-            }//每250公尺時且費率加收5元
-            else if(distance >= 250 && addCost >=5){
+            }//每250公尺時且費率加收10元
+            else if(distance >= 250 && addCost >=10){
                 cost.setText(nf.format(count) + "元");
             }
         }
